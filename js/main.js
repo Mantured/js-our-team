@@ -63,7 +63,6 @@ function createCard(mate) {
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body', 'text-center');
 
-
     const name = document.createElement('h4');
     const role = document.createElement('p');
 
@@ -81,11 +80,21 @@ function createCard(mate) {
 //? mi gnero le carte con un ciclo for
 const container = document.querySelector('#team-card');
 
-function generateCard() {
+/* function generateCard() {
     for (let i = 0; i < team.length; i++) {
         const card = createCard(team[i]);
+        container.appendChild(card);
+    };
+} */
+
+function generateCard() {
+    for (let x in team) {
+        const card = createCard(team[x]);
         container.appendChild(card);
     };
 }
 
 generateCard();
+
+
+
