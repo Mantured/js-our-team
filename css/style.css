@@ -1,0 +1,12 @@
+.cards-container {
+	height: 100vh;
+	width: 100%;
+	background-color: blanchedalmond;
+}
+
+/* ricordarsi di dare una dimensione alla sezione card */
+
+img {
+	height: 100%;
+	width: 100%;
+}
