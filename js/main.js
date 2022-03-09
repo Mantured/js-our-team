@@ -92,6 +92,7 @@ function generateCard() {
     for (let x in team) {
         const card = createCard(team[x]);
         container.appendChild(card);
+        /* console.log(team[x]); */
     };
 }
 
