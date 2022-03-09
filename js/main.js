@@ -80,15 +80,9 @@ function createCard(mate) {
 
 //? mi gnero le carte con un ciclo for
 const container = document.querySelector('#team-card');
-
-/* function generateCard() {
-    for (let i = 0; i < team.length; i++) {
-        const card = createCard(team[i]);
-        container.appendChild(card);
-    };
-} */
 //? meglio let in
 function generateCard() {
+    container.innerHTML = "";
     for (let x in team) {
         const card = createCard(team[x]);
         container.appendChild(card);
@@ -96,6 +90,40 @@ function generateCard() {
     };
 }
 
+document.querySelector('button').addEventListener('click', function () {
+
+    const newMate = document.getElementById('name-mate');
+    const newMateRole = document.getElementById('role-mate');
+    const newImgMate = document.getElementById('img-mate');
+
+    const newMember = {
+        name: newMate.value,
+        role: newMateRole.value,
+        image: newImgMate.value,
+    }
+    console.log(newMate);
+    console.log(newMateRole);
+    console.log(newImgMate);
+
+    console.log(team);
+
+    team.push(newMember);
+
+    newMate.value = "";
+    newMateRole.value = "";
+    newImgMate.value = "";
+
+    generateCard();
+
+
+})
+
+/* function generateCard() {
+    for (let i = 0; i < team.length; i++) {
+        const card = createCard(team[i]);
+        container.appendChild(card);
+    };
+} */
 generateCard();
 
 
