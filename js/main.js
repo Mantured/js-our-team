@@ -108,25 +108,28 @@ document.querySelector('button').addEventListener('click', function () {
 
 })
 
+const container = document.querySelector('#team-card');
+
 //? mi gnero le carte con un ciclo for
-/* function generateCard() {
+function generateCard() {
+    container.innerHTML = ""; //? altrimenti me ne stamperebbe 2 volte
     for (let i = 0; i < team.length; i++) {
         const card = createCard(team[i]);
         container.appendChild(card);
     };
-} */
+}
 
 
-const container = document.querySelector('#team-card');
-//? meglio let in
-function generateCard() {
+
+//? meglio let in, è invece no.
+/* function generateCard() {
     container.innerHTML = ""; //? altrimenti me ne stamperebbe 2 volte
     for (let x in team) {
         const card = createCard(team[x]);
         container.appendChild(card);
-        /* console.log(team[x]); */
+        console.log(team[x]);
     };
-}
+} */
 generateCard();
 
 
