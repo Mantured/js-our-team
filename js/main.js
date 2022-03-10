@@ -37,7 +37,7 @@ const team = [
     document.getElementById("team-card").innerHTML += (`
     <div class="col-4">
         <div class="card">
-        <img src="img/${team[x].image}" class="card-img-top" alt="photo of Wayne Barnett">
+        <img src="img/${team[x].image}" class="card-img-top" alt="profile photo of ${team[x].name} ">
         <div class="card-body text-center">
             <h4 class="card-text">${team[x].name}</h4>
             <p class="card-text">${team[x].role}</p>
