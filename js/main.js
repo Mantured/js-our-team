@@ -79,7 +79,6 @@ function createCard(mate) {
 }
 
 
-
 document.querySelector('button').addEventListener('click', function () {
 
     const newMate = document.getElementById('name-mate');
@@ -118,18 +117,6 @@ function generateCard() {
         container.appendChild(card);
     };
 }
-
-
-
-//? meglio let in, è invece no.
-/* function generateCard() {
-    container.innerHTML = ""; //? altrimenti me ne stamperebbe 2 volte
-    for (let x in team) {
-        const card = createCard(team[x]);
-        container.appendChild(card);
-        console.log(team[x]);
-    };
-} */
 generateCard();
 
 
