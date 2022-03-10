@@ -32,9 +32,9 @@ const team = [
     },
 ];
 
-
-/* for (let x in team) {
-    document.getElementById("my-card-team").innerHTML = (`
+//? metodo richiesto con stampa su console e su DOM aggiunta immagine
+/* for (let x = 0; x < team.length; x++) {
+    document.getElementById("team-card").innerHTML += (`
     <div class="col-4">
         <div class="card">
         <img src="img/${team[x].image}" class="card-img-top" alt="photo of Wayne Barnett">
@@ -78,17 +78,7 @@ function createCard(mate) {
     return card;
 }
 
-//? mi gnero le carte con un ciclo for
-const container = document.querySelector('#team-card');
-//? meglio let in
-function generateCard() {
-    container.innerHTML = "";
-    for (let x in team) {
-        const card = createCard(team[x]);
-        container.appendChild(card);
-        /* console.log(team[x]); */
-    };
-}
+
 
 document.querySelector('button').addEventListener('click', function () {
 
@@ -118,12 +108,25 @@ document.querySelector('button').addEventListener('click', function () {
 
 })
 
+//? mi gnero le carte con un ciclo for
 /* function generateCard() {
     for (let i = 0; i < team.length; i++) {
         const card = createCard(team[i]);
         container.appendChild(card);
     };
 } */
+
+
+const container = document.querySelector('#team-card');
+//? meglio let in
+function generateCard() {
+    container.innerHTML = ""; //? altrimenti me ne stamperebbe 2 volte
+    for (let x in team) {
+        const card = createCard(team[x]);
+        container.appendChild(card);
+        /* console.log(team[x]); */
+    };
+}
 generateCard();
 
 
